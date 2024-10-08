@@ -1,0 +1,332 @@
+body{
+    font-family: "Montserrat", system-ui;
+    margin: 0;
+    background-color: #000;
+    color:#fff;
+    overflow: hidden    ;
+}
+.main{
+    display:flex;
+    height: 100vh;
+    padding:0.5rem;
+}
+.sidebar{
+    background-color:#000;
+    border-radius: 1rem; /*16px*/
+    width: 340px;
+    margin-right: 0.5rem;
+}
+.main-content{
+    background-color: #121212;
+    /* position: relative; */
+    flex:1; /*Occupies all rem width which other divs don't require*/
+    border-radius: 1rem; /*16px*/
+    overflow:auto; /*scroller included*/
+    padding:0 1.5rem 0 1.5rem;
+    /* position: relative; */
+
+}
+.music-player{
+    background-color: black;
+    position: fixed;
+    bottom:0;
+    height:72px;
+    width:100%;
+}
+a{
+    text-decoration:none;
+    color:#fff;
+}
+.nav{
+    background-color: #121212;
+    border-radius: 1rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+.nav-option{
+    line-height:2.5rem;
+    opacity: 0.7;
+    padding:0.5rem 0.75rem;
+}
+.nav-option:hover{
+    opacity: 1;
+}
+.nav-option i{
+    line-height: 1.25rem;
+}
+.nav-option a{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    padding:0.5rem 0.75rem;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.library-option img{
+    width:1.25rem;
+    height: 1.25rem;   
+}
+.icons{
+    font-size: 1.25rem;
+    display: flex;
+}
+.icons i{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+.icons i:hover{
+    opacity: 1;
+}
+.box{
+    background-color: #232323;
+    height: 9.5rem;
+    border-radius: 0.75rem;
+    margin:0.75rem 0 1.75rem 0;
+    padding:0.75rem 1.25rem;
+}
+.box-p1{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.box-p2{
+    font-size: 0.5rem;
+    opacity: 0.8;
+}
+.badge{
+    background-color: #fff;
+    border: none;
+    border-radius: 100px;
+    font-weight: 700;
+    padding:0.25rem 1rem;
+    margin-top:0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+.dark-badge{
+    background-color: #000;
+    color:#fff;
+}
+.sticky-nav{
+    background-color: #121212;
+    position: sticky;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10; /*layers effect - nav bar upper layer as compared to main-content -> scroll -> navbar remains above main-content -> Avoid clashing */
+}
+.sticky-nav-icons{
+    margin-left:0.75rem;
+}
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item{
+    margin-right: 1rem;
+}
+@media (max-width:1000px) {
+    .hide{
+        display:none;
+    }   
+}
+.card{
+    background-color: #232323;
+    width:150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-img{
+    width:150px;    
+    border-radius: 0.5rem;
+}
+.card-title{
+    font-weight: 600;
+}
+.card-info{
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+.footer{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.3;
+}
+.music-player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+.album{
+    width: 25%;
+    /* background-color: pink; */
+}
+.player{
+    width:50%;
+    /* background-color: orange; */
+}
+.controls{
+    width: 25%;
+    /* background-color: green; */
+}
+.player-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+.player-controls-icon{
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+.player-controls-icon:hover{
+    opacity: 1;
+}
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar{
+    width:70%;
+    appearance: none;
+    background:transparent;
+    cursor: pointer;
+}
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    height: 0.2rem;
+    border-radius: 100px;
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height:1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+.album{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.album-image img{
+    height: 3.5rem;
+    width: 3.5rem;
+    /* margin-right: 0.75rem; */
+    padding: 0.25rem;
+    border-radius: 4px;
+}
+.album-info p{
+    line-height: 1rem;
+}
+.album-icons i{
+    margin-left:1rem;
+    margin-right: 0.75rem;
+    font-size:1.5rem;
+    opacity: 0.7;
+}
+.album-icons i:hover{
+    opacity: 1;
+}
+.album-icons img{
+    background-color: white;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 4px;
+    align-self: center;
+    justify-self: center;
+}   
+.control-play-container {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid #fff;
+    border-radius: 5px; /* Adjusts the roundness of the corners */
+    display: inline-flex;
+    margin-right: 0.25rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Background color of the square*/
+    opacity: 0.7;
+}
+.control-play-container:hover{
+    opacity: 1;
+}
+.controls{
+    background-color: black;
+    display: inline;
+    justify-content:center;
+    align-items: center;
+} 
+.control-play-container i {
+    color: #fff; 
+    /* font-size: 0.3rem; */
+    opacity: 0.7;
+}
+.controls-icons i:hover{
+    opacity: 1;
+}
+.controls i{
+    font-size: 1.1rem;
+    margin: 0 0.25rem 0 0.25rem;
+    opacity: 0.7;
+}
+.controls-icons i{
+    align-self: center;
+}
+.controls img{
+    height: 1.2rem;
+    width: 1.2rem;
+    margin:0 0.5rem 0 0.5rem;
+    border-radius: 4px;
+    position: relative;
+    top:0.25rem;
+}
+.controls-progress-bar{
+    width:40%;
+    appearance: none;
+    margin: 0 0.25rem 0 0.25rem;
+    background:transparent;
+    cursor: pointer;
+}
+.controls-progress-bar::-webkit-slider-runnable-track{
+    background: linear-gradient(to right, #1bd760 0%, #1bd760 85%, #ddd 86%, #ddd 100%);
+    height: 0.2rem;
+    border-radius: 100px;
+}
+.controls-progress-bar::-webkit-slider-thumb{
+    appearance: none;
+}
+.controls-progress-bar::-ms-fill-lower{
+    background: #2a6495;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+} 
